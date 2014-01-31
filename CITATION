@@ -1,0 +1,23 @@
+To cite this software please use:
+
+	Gabriele D'Angelo, Stefano Ferretti, Moreno Marzolla.
+	Time Warp on the Go.
+	Proceedings of 3nd ICST/CREATE-NET Workshop on DIstributed
+	SImulation and Online gaming (DISIO 2012) as part of SIMUTools 2012.
+	Desenzano, Italy, March 2012. ISBN: 978-1-936968-47-3
+
+If you use BibTeX for LaTeX, please use:
+
+@inproceedings{gda-disio-12-2,
+	author = {D'Angelo, Gabriele and Ferretti, Stefano and Marzolla, Moreno},
+	title = {Time warp on the go},
+	booktitle = {Proceedings of the 5th International ICST Conference on Simulation Tools and Techniques},
+	series = {SIMUTOOLS '12},
+	year = {2012},
+	isbn = {978-1-4503-1510-4},
+	location = {Desenzano del Garda, Italy},
+	pages = {242--248},
+	numpages = {7},
+	publisher = {ICST (Institute for Computer Sciences, Social-Informatics and Telecommunications Engineering)},
+	address = {ICST, Brussels, Belgium, Belgium}
+}

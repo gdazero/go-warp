@@ -1,0 +1,38 @@
+include ../Makefile.inc
+
+SIMDIR=../src/
+TESTMSG=To test the model launch \'Main.out\' in .$(OUTDIR) or the scripts in the main directory
+MAINDEPS= $(SIMDIR)DT.8 $(SIMDIR)Sim.8 $(SIMDIR)Local.8 $(SIMDIR)Shared.8 $(SIMDIR)Random.8
+ALLDEPS= Main.out
+
+all: $(ALLDEPS)
+
+
+Main.out:	Main.8 
+	$(LD) -o ../$(OUTDIR)/Main.out Main.8
+	$(ECHO) $(TESTMSG)
+
+Main.8:	Main.go $(MAINDEPS)
+	$(CC) Main.go
+	
+$(SIMDIR)Sim.8: force_look
+	$(CD) $(SIMDIR); make Sim.8
+
+$(SIMDIR)DT.8: force_look
+	$(CD) $(SIMDIR); make DT.8
+
+$(SIMDIR)Local.8: force_look
+	$(CD) $(SIMDIR); make Local.8
+	
+$(SIMDIR)Shared.8: force_look
+	$(CD) $(SIMDIR); make Shared.8
+	
+$(SIMDIR)Random.8: force_look
+	$(CD) $(SIMDIR); make Random.8
+
+	
+clean:
+	$(RM) *.8
+
+force_look:
+	true

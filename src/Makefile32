@@ -1,0 +1,36 @@
+include ../Makefile.inc
+
+ALLDEPS= Random.8 Const.8 DT.8 Heap.8 Communication.8 Gvt.8 Sim.8 Local.8
+
+all: $(ALLDEPS)
+
+
+Heap.8:	Heap.go DT.8 Const.8
+	$(CC) Heap.go
+
+Random.8:	Random.go
+	$(CC) Random.go
+
+Sim.8:	Sim.go DT.8 Communication.8 Local.8 Const.8 Gvt.8 Shared.8
+	$(CC) Sim.go
+
+DT.8:	DT.go Const.8
+	$(CC) DT.go
+
+Const.8:	Const.go
+	$(CC) Const.go
+
+Communication.8:	Communication.go DT.8 Const.8
+	$(CC) Communication.go
+
+Local.8:	Local.go DT.8 Heap.8 Const.8
+	$(CC) Local.go
+
+Gvt.8:	Gvt.go Const.8 DT.8 Shared.8
+	$(CC) Gvt.go
+
+Shared.8:	Shared.go DT.8 Local.8
+	$(CC) Shared.go
+
+clean:
+	$(RM) *.8 *~

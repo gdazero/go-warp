@@ -1,0 +1,28 @@
+##################################################################################################
+  GO-WARP: a Time Warp simulator written in Go				http://pads.cs.unibo.it
+  
+  as described in "Time Warp on the Go" http://arxiv.org/abs/1206.2772
+  Proc. of 3nd ICST/CREATE-NET Workshop on DIstributed SImulation and Online gaming (DISIO 2012). 
+  In conjunction with SIMUTools 2012. Desenzano, Italy, March 2012. ISBN: 978-1-936968-47-3
+
+  Copyright 2014, Gabriele D'Angelo, Moreno Marzolla, Pietro Ansaloni
+  Computer Science Department, University of Bologna, Italy
+    
+##################################################################################################
+
+  This directory contains the Go-based implementation of the PHOLD synthetic benchmark for 
+  optimistic simulation, originally described in:
+  
+  R. M. Fujimoto. Performance of time warp under synthetic workloads. In Proceedings of the SCS
+  Multiconference on Distributed Simulation, pages 23–28, 1990.
+   
+##################################################################################################
+
+Simulation parameters:
+  * number of LPs (LPN)
+  * number of simulated entities (SEN)
+  * simulated time (ST)
+
+PHOLD model parameters:
+  * number of events in the system (defined by the event density)
+  * synthetic workload, that is the number of FLOs (FLoating point Operations)
